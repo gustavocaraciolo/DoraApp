@@ -1,0 +1,48 @@
+entity Produto{
+    nome String required,
+    quantidade Integer,
+    precoUnitario BigDecimal,
+    quantidadeEmEstoque Integer,
+    quantidadePedidos Integer
+}
+
+entity Categoria{
+    nome String required
+}
+
+entity Pedidos{
+    dataPedido ZonedDateTime
+}
+
+entity ItensPedidos{
+    desconto BigDecimal
+}
+
+entity UsuarioExtra{
+    String telefone
+}
+
+entity Tag {
+    String nome required
+}
+
+relationship OneToMany {
+    UsuarioExtra{tag} Tag{usuarioExtra}
+}
+
+relationship OneToOne {
+    Produto{categoria} Categoria{produto},
+    UsuarioExtra{user required} to User{usuarioExtra}
+}
+
+relationship ManyToOne {
+    Pedido{UsuarioExtra} UsuarioExtra{pedido}
+}
+
+relationship ManyToMany {
+    ItensPedidos{produto} Produto{itensPedidos}
+}
+
+paginate all with pagination
+dto * with mapstruct
+service all with serviceImpl
