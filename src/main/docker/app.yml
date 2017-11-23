@@ -1,0 +1,19 @@
+version: '2'
+services:
+    doraapp-app:
+        image: doraapp
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://doraapp-mysql:3306/doraapp?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=doraapp-elasticsearch:9300
+        ports:
+            - 8080:8080
+    doraapp-mysql:
+        extends:
+            file: mysql.yml
+            service: doraapp-mysql
+    doraapp-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: doraapp-elasticsearch
