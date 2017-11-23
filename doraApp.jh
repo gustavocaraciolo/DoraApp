@@ -37,12 +37,10 @@ relationship OneToOne {
 }
 
 relationship ManyToOne {
-    Pedido{UsuarioExtra required} to UsuarioExtra{pedido}
-}
-
-relationship ManyToMany {
+    Pedido{UsuarioExtra required} to UsuarioExtra{pedido},
     ItensPedido{produto required} to Produto{itensPedido}
 }
+
 
 paginate all with pagination
 dto * with mapstruct
