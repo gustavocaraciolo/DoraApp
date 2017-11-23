@@ -28,7 +28,7 @@ entity Tag {
 
 relationship OneToMany {
     Tag{usuarioExtra} to UsuarioExtra{tag},
-    Pedido{itensPedido} to ItensPedido{pedido}
+    ItensPedido{pedido} to Pedido{itensPedido}
 }
 
 relationship OneToOne {
