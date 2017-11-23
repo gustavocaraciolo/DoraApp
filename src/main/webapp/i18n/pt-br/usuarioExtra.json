@@ -1,0 +1,25 @@
+{
+    "doraApp": {
+        "usuarioExtra" : {
+            "home": {
+                "title": "Usuario Extras",
+                "createLabel": "Criar novo Usuario Extra",
+                "createOrEditLabel": "Criar ou editar Usuario Extra",
+                "search": "Pesquisar por Usuario Extra"
+            },
+            "created": "Um novo Usuario Extra foi criado com o identificador {{ param }}",
+            "updated": "Um Usuario Extra foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Usuario Extra foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Usuario Extra {{ id }}?"
+            },
+            "detail": {
+                "title": "Usuario Extra"
+            },
+            "telefone": "Telefone",
+            "user": "User",
+            "tag": "Tag",
+            "pedido": "Pedido"
+        }
+    }
+}

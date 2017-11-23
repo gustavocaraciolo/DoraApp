@@ -1,0 +1,24 @@
+{
+    "doraApp": {
+        "itensPedido" : {
+            "home": {
+                "title": "Itens Pedidos",
+                "createLabel": "Criar novo Itens Pedido",
+                "createOrEditLabel": "Criar ou editar Itens Pedido",
+                "search": "Pesquisar por Itens Pedido"
+            },
+            "created": "Um novo Itens Pedido foi criado com o identificador {{ param }}",
+            "updated": "Um Itens Pedido foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Itens Pedido foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Itens Pedido {{ id }}?"
+            },
+            "detail": {
+                "title": "Itens Pedido"
+            },
+            "desconto": "Desconto",
+            "pedido": "Pedido",
+            "produto": "Produto"
+        }
+    }
+}

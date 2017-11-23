@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "categoria",
+            "otherEntityName": "categoria",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "produto"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "itensPedido",
+            "otherEntityName": "itensPedido",
+            "otherEntityRelationshipName": "produto"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "quantidade",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "precoUnitario",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "quantidadeEmEstoque",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quantidadePedidos",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171123142120",
+    "entityTableName": "produto",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

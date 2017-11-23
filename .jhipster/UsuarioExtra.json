@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "usuarioExtra"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tag",
+            "otherEntityName": "tag",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pedido",
+            "otherEntityName": "pedido",
+            "otherEntityRelationshipName": "usuarioExtra"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171123142124",
+    "entityTableName": "usuario_extra",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

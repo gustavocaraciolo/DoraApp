@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "usuarioExtra",
+            "otherEntityName": "usuarioExtra",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "itensPedido",
+            "otherEntityName": "itensPedido",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dataPedido",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20171123142122",
+    "entityTableName": "pedido",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
