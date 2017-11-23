@@ -10,37 +10,37 @@ entity Categoria{
     nome String required
 }
 
-entity Pedidos{
+entity Pedido{
     dataPedido ZonedDateTime
 }
 
-entity ItensPedidos{
+entity ItensPedido{
     desconto BigDecimal
 }
 
 entity UsuarioExtra{
-    String telefone
+    telefone String
 }
 
 entity Tag {
-    String nome required
+    nome String required
 }
 
 relationship OneToMany {
-    UsuarioExtra{tag} Tag{usuarioExtra}
+    UsuarioExtra{tag} to Tag{usuarioExtra}
 }
 
 relationship OneToOne {
-    Produto{categoria} Categoria{produto},
+    Produto{categoria} to Categoria{produto},
     UsuarioExtra{user required} to User{usuarioExtra}
 }
 
 relationship ManyToOne {
-    Pedido{UsuarioExtra} UsuarioExtra{pedido}
+    Pedido{UsuarioExtra required} to UsuarioExtra{pedido}
 }
 
 relationship ManyToMany {
-    ItensPedidos{produto} Produto{itensPedidos}
+    ItensPedido{produto required} to Produto{itensPedido}
 }
 
 paginate all with pagination
