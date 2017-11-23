@@ -42,6 +42,17 @@ public class CacheConfiguration {
             cm.createCache(com.dora.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.dora.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.dora.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.Produto.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.Produto.class.getName() + ".itensPedidos", jcacheConfiguration);
+            cm.createCache(com.dora.domain.Categoria.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.Pedido.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.ItensPedido.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.ItensPedido.class.getName() + ".pedidos", jcacheConfiguration);
+            cm.createCache(com.dora.domain.ItensPedido.class.getName() + ".produtos", jcacheConfiguration);
+            cm.createCache(com.dora.domain.UsuarioExtra.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.UsuarioExtra.class.getName() + ".pedidos", jcacheConfiguration);
+            cm.createCache(com.dora.domain.Tag.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dora.domain.Tag.class.getName() + ".usuarioExtras", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
